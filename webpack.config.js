@@ -8,7 +8,8 @@ module.exports = {
         './src/index.js'
     ],
     output: {
-        filename: 'bundle.js'
+        filename: 'bundle.js',
+        publicPath: "/webpack-demo/",
     },
     module: {
         rules: [
