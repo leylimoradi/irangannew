@@ -10,7 +10,8 @@
     "build": "webpack --mode production",
     "start": "webpack-dev-server --open",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build",
+  "package": "webpack --config webpack.config.production.js --progress --colors",
+  "deploy": "npm run package && [your deployment script]",
     "clean": "gh-pages-clean"
   },
   "private": true,
