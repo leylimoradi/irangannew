@@ -9,7 +9,7 @@ module.exports = {
     ],
     output: {
         filename: 'bundle.js',
-        publicPath: "/webpack-demo/",
+        publicPath: "/dist/",
     },
     module: {
         rules: [
