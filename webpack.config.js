@@ -1,11 +1,14 @@
 const { parenthesizedExpression } = require("@babel/types");
 const HtmlWebPackPlugin = require("html-webpack-plugin");
+const path = require('path');
 
 module.exports = {
     mode: 'development',
+    entry: [
+        './src/index.js'
+    ],
     output: {
-        filename: 'bundle.js',
-        path: '/',
+        filename: 'bundle.js'
     },
     module: {
         rules: [
