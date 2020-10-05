@@ -10,7 +10,9 @@
     "build": "webpack --mode production",
     "start": "webpack-dev-server --open",
      "predeploy":"npm run build",
-    "deploy":"gh-pages -d build"
+    "deploy":"gh-pages -d build",
+    "clean" : "gh-pages-clean"
+
   },
   "private": true,
   "keywords": [],
