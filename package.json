@@ -1,5 +1,5 @@
 {
-  "homepage": "https://leylimoradi.github.io/irangannew",
+  "homepage":"https://leylimoradi.github.io/irangannew",
   "name": "test",
   "version": "1.0.0",
   "description": "",
@@ -9,8 +9,8 @@
     "watch": "webpack --watch",
     "build": "webpack --mode production",
     "start": "webpack-dev-server --open",
-    "predeploy": "npm run build",
-  "deploy": "gh-pages -d dist"
+     "predeploy":"npm run build",
+    "deploy":"gh-pages -d build"
   },
   "private": true,
   "keywords": [],
