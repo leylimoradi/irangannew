@@ -81,10 +81,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/leylimoradi/gan.git"
+    "url": "git+https://github.com/leylimoradi/test.git"
   },
   "bugs": {
-    "url": "https://github.com/leylimoradi/gan/issues"
+    "url": "https://github.com/leylimoradi/test/issues"
   },
   "description": ""
 }
