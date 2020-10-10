@@ -1,44 +1,121 @@
-const { parenthesizedExpression } = require("@babel/types");
-const HtmlWebPackPlugin = require("html-webpack-plugin");
 const path = require('path');
+var webpack = require('webpack');
 
+const HtmlWebpackPlugin = require("html-webpack-plugin");
+
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+
+const htmlWebpackPlugin = new HtmlWebpackPlugin({
+    template: path.join(__dirname, "examples/src/index.html"),
+    filename: "./index.html"
+});
 module.exports = {
     mode: 'development',
-    entry: [
-        './src/index.js'
-    ],
+    entry: path.join(__dirname, "examples/src/index.js"),
     output: {
-        filename: 'bundle.js',
-        
+
+        path: path.join(__dirname, "examples/dist"),
+        filename: "[name].js",
+        publicPath: '/',
+        sourceMapFilename: "[name].js.map"
+
     },
+    devtool: "source-map",
     module: {
+
         rules: [
+               {
+        test: /\.txt$/i,
+        use: 'raw-loader',
+      },
             {
-                test: /\.(js|jsx)$/,
+                test: /\.json$/,
+                loader: 'json-loader',
+                exclude: [path.resolve(__dirname, 'node_modules')],
+                type: "javascript/auto"
+            }, {
+                test: /\.js$/,
                 exclude: /node_modules/,
                 use: {
-                    loader: "babel-loader"
+                    loader: "babel-loader",
+                    options: {
+                        presets: [
+                            "@babel/preset-env", "@babel/preset-react"
+                        ],
+                        "plugins": [
+                            [
+                                "@babel/plugin-proposal-class-properties", {
+                                    "loose": true
+                                }
+                            ]
+                        ]
+                    }
                 }
+            }, {
+                test: /\.jsx$/,
+                loader: "react-hot!babel",
+                exclude: [/node_modules/, /public/]
+            }, {
+                test: /\.css$/i,
+                use: [MiniCssExtractPlugin.loader, 'css-loader']
             },
             {
-                test: /\.html$/,
+                test: /\.s[ac]ss$/i,
+                use: [
+                    'style-loader',
+                    'css-loader',
+                    {
+                        loader: 'sass-loader',
+                        options: {
+                            sourceMap: true,
+                            sassOptions: {
+                                outputStyle: 'compressed',
+                            },
+                        },
+                    },
+                ]
+
+            },
+            
+            {
+
+                test: /\.(png|jp(e*)g|svg)$/,
                 use: [
                     {
-                        loader: "html-loader"
+                        loader: 'url-loader',
+                        options: {
+                  
+                            name: 'images/[hash]-[name].[ext]',
+                          
+                            outputPath: '/src/images/'
+                        }
                     }
                 ]
             }
+        
+            , {
+                test: /\.(woff|woff2|eot|ttf|otf)$/,
+                use: ['file-loader']
+            }
         ]
     },
-    devServer: {
-        historyApiFallback: {
-            index: '/'
-        },
-    },
+
     plugins: [
-        new HtmlWebPackPlugin({
-            template: "./src/index.html",
-            filename: "./index.html"
-        })
-    ]
+         new HtmlWebpackPlugin({
+            title: 'test',
+            template: path.resolve(__dirname, 'examples/src/index.html'),
+        }), new MiniCssExtractPlugin()
+    ],
+    resolve: {
+        extensions: [".js", ".jsx", ".json", ".css", '.scss', ".ts", ".tsx"]
+       
+    },
+    devServer: {
+        port: 3001,
+        compress: true,
+        historyApiFallback: { index: '/' },
+        contentBase: path.join(__dirname, 'dist'),
+        hot: true
+      
+    }
 };

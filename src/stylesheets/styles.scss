@@ -1,0 +1,389 @@
+
+@font-face {
+
+    font-family: "iranganFont";
+    src: url("../font/IRANSansWeb.ttf") format('truetype');
+}
+$fontMain: "iranganFont", sans-serif;
+
+$input-border: 1px solid #dedede;
+$red: #e43535;
+
+footer {
+    .container {
+        height: auto;
+    }
+    .rightSection {
+        width: 50%;
+        height: 100px;
+        float: right;
+        margin: 20px 0;
+        div {
+            text-align: right;
+            width: calc(100% / 3);
+            height: auto;
+            float: right;
+            font-size: 16px;
+            cursor: default;
+
+            ul {
+                margin-top: 5px;
+                li {
+                    text-align: right;
+                    height: auto;
+                    font-size: 13px;
+                    color: #6b6868;
+                    padding: 5px 0;
+                    cursor: pointer;
+                    &:hover {
+                        color: #e43535;
+                    }
+                }
+            }
+        }
+    }
+    .leftSection {
+        float: left;
+        width: 50%;
+        height: 100px;
+        margin: 20px 0;
+        input {
+            border: $input-border;
+            height: 30px;
+            float: right;
+            width: calc(100% - 100px);
+            padding: 0 10px 5px;
+        }
+        ::placeholder {
+            color: grey;
+            font-size: 12px;
+
+        }
+        button {
+            border-radius: 0;
+            height: 30px;
+            width: 90px;
+            background-color: $red;
+            border-color: $red;
+            font-family: $fontMain;
+            &:hover {
+                background-color: #bb2626;
+                border-color: $red;
+
+            }
+        }
+    }
+}
+.modal-open {
+
+    padding-right: 17px !important;
+
+    header {
+        padding-right: 17px;
+    }
+    .sideSection {
+        margin-right: 0!important;
+        padding-right: 10px!important;
+    }
+}
+.topbar {
+    position: fixed;
+    height: 50px;
+    left: 0;
+    top: -50px;
+    background-color: #e43535;
+    width: 100%;
+    text-align: center;
+    font-size: 22px;
+    color: white;
+
+    z-index: 9;
+    text-align: right;
+    font-family: "iranganFont";
+    p {
+        height: 100%;
+        width: fit-content;
+        padding-top: 10px;
+    }
+    svg {
+        position: absolute;
+        left: 0;
+        top: 8px;
+    }
+}
+
+.hide {
+
+    top: 0;
+}
+.share {
+    background: url("../images/Share-grey.svg") no-repeat center;
+
+    background-size: 17px;
+    width: 20px;
+    height: 20px;
+    top: 3px;
+}
+.itemDes {
+    span {
+        width: 220px;
+        height: 140px;
+        font-size: 15px;
+        background-color: #f0f0f0;
+        margin: auto;
+        color: #c3c3c3;
+        display: flex;
+        align-content: center;
+        align-items: center;
+        text-align: center;
+        justify-content: center;
+
+    }
+}
+.itemDetails {
+    text-align: right;
+
+    h4 {
+        font-size: 15px;
+        font-weight: normal;
+        font-family: "iranganFont";
+
+    }
+    div {
+        color: grey;
+        font-size: 13px;
+        height: 30px;
+
+        span:first-child {
+            float: right;
+            color: #e43535;
+        }
+        span:last-child {
+            float: left;
+            color: #e43535;
+
+        }
+    }
+    div:last-child {
+        margin-top: 20px;
+    }
+}
+.comingsoon {
+    width: 800px;
+    height: 800px;
+    background-color: $red;
+    color: white;
+    margin: auto;
+
+    padding: 40px;
+    h2 {
+        font-size: 33px;
+        text-align: center;
+    }
+    h5 {
+        text-align: center;
+    }
+    ul {
+        li {
+            width: fit-content;
+            margin: auto;
+            text-align: left;
+            a {
+                color: yellow;
+                font-weight: bold;
+
+            }
+
+        }
+    }
+}
+.ccc {
+    position: absolute;
+    z-index: 999;
+    left: 0;
+    position: absolute;
+    right: 0;
+    height: 50px;
+    top: 0;
+
+    width: 100%;
+
+}
+.modal-parralex {
+    max-width: 100%;
+    height: fit-content;
+    margin: 0;
+    .modal-content {
+        height: 100%;
+        border: 0;
+        border-radius: 0;
+        margin-top: 50px;
+        nav {
+            height: 50px;
+            background-color: $red;
+            border: 0;
+            padding: 0;
+
+            .modal-title {
+                margin-bottom: 0;
+                line-height: normal;
+                width: fit-content;
+                float: right;
+                padding-top: 0;
+                color: white;
+            }
+            .btn-primary:not(:disabled):not(.disabled):active,
+            button {
+                padding: 0;
+                border: 0;
+                border-radius: 0;
+                background-color: unset;
+
+                outline: none;
+                box-shadow: none;
+                &:focus {
+                    box-shadow: none;
+                }
+                &:active {
+                    box-shadow: none;
+                }
+            }
+            .closeBtnModal {
+                width: 20px;
+                height: 20px;
+                position: absolute;
+                left: 0;
+                top: 0;
+                display: block;
+                z-index: 99;
+                color: white;
+            }
+            .container {
+                position: relative;
+            }
+        }
+        .titleParallex {
+            background-image: url("../../examples/src/images/imgCar.jpg");
+            height: 80vh;
+            max-height: 100%;
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            width: 100%;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            color: white;
+            margin-bottom: 20px;
+            position: relative;
+            background-color: white;
+
+            h1 {
+                margin: auto;
+                font-size: 62px;
+                font-family: $fontMain!important;
+                text-shadow: 1px 4px 2px rgba(0, 0, 0, 0.3);
+            }
+        }
+        .parallexContainer {
+            width: 900px;
+
+            margin: auto;
+
+            .contentParallex {
+                p {
+                    line-height: 2;
+                    font-size: 15px;
+                    text-align: justify;
+                }
+                img {
+                    width: 100%;
+                    margin-bottom: 15px;
+                }
+                h4 {
+                    font-size: 25px;
+                    color: $red;
+                    text-align: right;
+                    font-family: $fontMain;
+                }
+
+            }
+        }
+        .modal-body {
+            padding: 0;
+        }
+        .fixedImg {
+            background-image: url("../images/content/imgCar4.jpg");
+            width: 100%;
+            height: 80vh;
+            max-height: 100%;
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            color: white;
+            margin-bottom: 20px;
+            position: relative;
+            background-color: white;
+            background-size: cover;
+        }
+        .xs {
+            background-image: url("../images/content/imgCar3.jpg");
+        }
+        .backToTop {
+            box-shadow: 0 0.4px 3px #b5b1b1;
+            animation: fadeIn 700ms ease-in-out 1s both;
+            cursor: pointer;
+            position: fixed;
+            bottom: 50px;
+            right: 40px;
+              background: rgb(187, 187, 187);
+            background-image: url("../images/arrowUpWhite.svg");
+            background-repeat: no-repeat;
+            background-position: center;
+            width: 50px;
+            height: 50px;
+            border-radius: 40px;
+            background-size: 30px;
+              
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+    }
+
+}
+.asd + div {
+    background-color: black;
+    overflow-y: hidden !important;
+    position: absolute;
+    bottom: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: fit-content;
+}
+// .asd + div::-webkit-scrollbar {
+//     display: none;
+// }
+.showModalw {
+
+    overflow-y: scroll!important;
+
+}
+#titlescroll{
+    display: none;
+}
+.show{
+    display: block!important;
+}

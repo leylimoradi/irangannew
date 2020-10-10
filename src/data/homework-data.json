@@ -1,0 +1,72 @@
+{
+    "articles": {
+        "category": "Cuisine",
+        "list": [
+            {
+                "language": "bg",
+                "title": "Гювеч",
+                "text": "Гювеч (на турски: güveç) е общото название на традиционни ястия от балканската кухня, които сами по себе си са вид яхния от месо и зеленчуци (но може да бъде и вегетарианско ястие). Гювеч е също така название на традиционен огнеупорен глинен съд с похлупак, използван за приготвяне на задушени и печени ястия. Малкият гювеч се нарича гювече или гюведже.\nВ подобен вариант такова ястие присъства в кухнята на други народи (например в унгарската кухня – гулаш).\nВ българската кухня има различни видове яхнии или задушени ястия с месо, които са идентични или подобни на гювеч, но носят други имена, например чомлек, задушен кебап, задушена яхния и др.\nПоради отличните си вкусови и питателни качества, гювечът е любимо основно ястие."
+            },
+            {
+                "language": "en",
+                "title": "Güveç (dish)",
+                "text": "Güveç or đuveč is a Turkish, Romanian and Balkan oven-baked meat and vegetable stew similar to ratatouille. It is made with meat, olives, tomatoes, mushrooms, onions, herbs, and spices and is often served with \"Balkan mixed salad\", a combination of roasted eggplant, sweet peppers, garlic, tomatoes, and vinegar."
+            },
+            {
+                "language": "de",
+                "title": "Duvec",
+                "text": "Duvec oder Dschuwetsch ist ein traditionelles südosteuropäisches Schmorgericht aus Gemüse und Fleisch, teilweise auch Reis oder Reisnudeln (Orzo, griechisch Kritharaki). Es gilt in mehreren Staaten dieser Region als Nationalgericht. Der Name ist türkischer Herkunft und bezeichnete ursprünglich den zum Schmoren verwendeten Tontopf Güveç."
+            },
+            {
+                "language": "bg",
+                "title": "Агнешко чOмлек кебаб",
+                "text": "Агнешки чомлек кебап е ястие от традиционната българска кухня, приготвено от нарязано на късове и задушено в гърне агнешко месо, лук, арпаджик, чесън, доматено пюре, брашно, бяло вино и подправки."
+            }
+        ]
+    },
+    "employees": {
+        "category": "Positions",
+        "positions": [
+            {
+                "id": 1,
+                "position": "Software Engineer",
+                "salary": 132000,
+                "currency": "USD",
+                "office": "London",
+                "extensionNumber": 2558
+            },
+            {
+                "id": 2,
+                "position": "Accout",
+                "salary": 162700,
+                "currency": "USD",
+                "office": "Tokyo",
+                "extensionNumber": 5407
+            },
+            {
+                "id": 3,
+                "position": "Chief Executive Offiver (CEO)",
+                "salary": 1200000,
+                "currency": "USD",
+                "office": "London",
+                "extensionNumber": 5797
+            },
+            {
+                "id": 4,
+                "position": "Junior Technical Autor",
+                "salary": 86000,
+                "currency": "USD",
+                "office": "San Francisco",
+                "extensionNumber": 5555
+            },
+            {
+                "id": 5,
+                "position": "Software Engineer",
+                "salary": 206850,
+                "currency": "USD",
+                "office": "San Francisco",
+                "extensionNumber": 1314
+            }
+        ]
+    }
+}
